@@ -52,18 +52,19 @@ app.get('/scrape', function(req, res){
         // Select each element in the HTML body from which you want information.
         // NOTE: Cheerio selectors function similarly to jQuery's selectors,
         // but be sure to visit the package's npm page to see how it works
-        $("h2.headline").each(function(i, element) {
+        $("div.story-body").each(function(i, element) {
       
           var headline = $(element).children().text();
-          var p = $(element).children().text();
-          var link = $(element).children("a").attr("href");
+          var summary = $(element).find("p").text();
+          var link = $(element).find("a").attr("href");
           var result = {
-            title : headline,
+            title: headline,
+            p: summary,
             link: link
           }
           
           models.Article.create(result, function(article){
-            console.log("articl crated")
+            console.log("article crated")
           })
           // Save these results in an object that we'll push into the results array we defined earlier
          
