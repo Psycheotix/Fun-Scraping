@@ -1,0 +1,30 @@
+{
+  "name": "fun-scraping",
+  "version": "1.0.0",
+  "description": "A fun scraper that let's users add comments to the scraped articles.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Psycheotix/Fun-Scraping.git"
+  },
+  "keywords": [
+    "scraper"
+  ],
+  "author": "Christine Deer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Psycheotix/Fun-Scraping/issues"
+  },
+  "homepage": "https://github.com/Psycheotix/Fun-Scraping#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^5.4.6",
+    "morgan": "^1.9.1"
+  }
+}
